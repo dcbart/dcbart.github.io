@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="CSS/Main.css">
+		<script src="JS/jquery.js"></script>
+		<script src="JS/Main.js"></script>
+	</head>
+	<body>
+
+		<div class="slideshow-container">
+
+			<div id="Background" class="mySlides fade">
+				<div class="circleBase type3">
+					<br><br><br><br><br><br><br><br>
+					<h1 align="center">Dulwich College Beijing<br>Art & Design</h1>
+					<center>
+						
+						<button onclick="currentSlide(3); removeBackground();" class="homepageNavBtn">Artist Of The Week</button>
+						<button onclick="currentSlide(4); removeBackground();" class="homepageNavBtn">Exhibitions</button>
+						<button onclick="currentSlide(5); removeBackground();" class="homepageNavBtn">IGCSE/IB Art</button>
+					</center>
+				</div>
+			</div>
+
+			<div class="mySlides ">
+			<br>
+				<div class="greyBorder">
+				<br><br><br><br><br><br><br>
+				<center>
+					<button onClick="currentSlide(2);"class="active">About</button><br><br><br><br>
+					<button onClick="currentSlide(3);" class="PagesNavBtn">Artist Of The Week</button><br><br>
+					<button onClick="currentSlide(4);" class="PagesNavBtn">Exhibitions</button><br><br>
+					<button onClick="currentSlide(5);" class="PagesNavBtn">IGCSE/IB Art</button><br><br>
+				</center>
+				<br><br><br><br><br><br><br><br><br><br>
+				<img class="imgBtn" onClick="currentSlide(1); setBackground();" src="Images/Home.png" width="35%">
+				</div>
+				
+				<div class="aboutPage">
+				<h1>ABOUT</h1>
+					<div class="indent">
+						<p id="aboutText"></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mySlides">
+			<br>
+				<div class="greyBorder">
+				<br><br><br><br><br><br><br>
+				<center>
+					<button onClick="currentSlide(2);" class="PagesNavBtn">About</button><br><br>
+					<button onClick="currentSlide(3);" class="active">Artist Of The Week</button><br><br><br><br>
+					<button onClick="currentSlide(4);" class="PagesNavBtn">Exhibitions</button><br><br>
+					<button onClick="currentSlide(5);" class="PagesNavBtn">IGCSE/IB Art</button><br><br>
+				</center>
+				<br><br><br><br><br><br><br><br><br><br>
+				<img class="imgBtn" onClick="currentSlide(1); setBackground();" src="Images/Home.png" width="35%">
+				</div>
+				
+			</div>
+			
+			<div class="mySlides">
+			<br>
+				<div class="greyBorder">
+				<br><br><br><br><br><br><br>
+				<center>
+					<button onClick="currentSlide(2);" class="PagesNavBtn">About</button><br><br>
+					<button onClick="currentSlide(3);" class="PagesNavBtn">Artist Of The Week</button><br><br>
+					<button onClick="currentSlide(4);" class="active">Exhibitions</button><br><br><br><br>
+					<button onClick="currentSlide(5);" class="PagesNavBtn">IGCSE/IB Art</button><br><br>
+				</center>
+				<br><br><br><br><br><br><br><br><br><br>
+				<img class="imgBtn" onClick="currentSlide(1); setBackground();" src="Images/Home.png" width="35%">
+				</div>
+			</div>
+			
+			<div class="mySlides">
+			<br>
+				<div class="greyBorder">
+				<br><br><br><br><br><br><br>
+				<center>
+					<button onClick="currentSlide(2);" class="PagesNavBtn">About</button><br><br>
+					<button onClick="currentSlide(3);" class="PagesNavBtn">Artist Of The Week</button><br><br>
+					<button onClick="currentSlide(4);" class="PagesNavBtn">Exhibitions</button><br><br>
+					<button onClick="currentSlide(5);" class="active">IGCSE/IB Art</button><br><br><br><br>
+				</center>
+				<br><br><br><br><br><br><br><br><br><br>
+				<img class="imgBtn" onClick="currentSlide(1); setBackground();" src="Images/Home.png" width="35%">
+				</div>
+			</div>
+
+		</div>
+		<br>
+		
+	</body>
+	
+	<script>
+		currentSlide(1);	
+		setBackground();
+		
+		$.get('TXT/About Txt.txt', function(data) {
+		   document.getElementById("aboutText").innerHTML= data
+		}, 'text');
+	</script>
+</html>
